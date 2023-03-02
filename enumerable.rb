@@ -13,7 +13,7 @@ module MyEnumerable
     false
   end
 
-  def filter(&block)
+  def filter?(&block)
     output_arr = []
     each do |element|
       output_arr << element if block.call(element) == true
