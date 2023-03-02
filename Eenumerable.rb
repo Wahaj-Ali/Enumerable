@@ -12,3 +12,12 @@ module MyEnumerable
     end
     false
   end
+  
+  def filter(&block)
+    output_arr = []
+    each do |element|
+      output_arr << element if block.call(element) == true
+    end
+    output_arr
+  end
+end
